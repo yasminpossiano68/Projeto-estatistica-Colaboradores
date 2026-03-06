@@ -14,9 +14,15 @@ def calcular_mediana():
 def calcular_variancia():
     pass
 
-def obter_extremos():
-    pass
+def obter_extremos(dados):
+    menor = min(dados)
+    maior = max(dados)
+    return menor, maior
 
 dados = limpar_dados(dados_sujos)
 
+menor, maior = obter_extremos(dados)
+
 print(f" Dados processados : {dados}")
+print(f"Menor valor é: {menor}")
+print(f"Maior valor é: {maior}")
