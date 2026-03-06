@@ -11,7 +11,7 @@ def calcular_media():
 def calcular_mediana():
     pass
 
-# Calculo de Variancia
+# Calculo de Variancia Gustavo e Pedro (os 00 da parada)
 def calcular_variancia():
     media = sum(dados) / len(dados)
     soma_quadrados = sum((x - media) ** 2 for x in dados)
