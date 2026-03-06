@@ -11,6 +11,7 @@ def calcular_media():
 def calcular_mediana():
     pass
 
+# Calculo de Variancia
 def calcular_variancia():
     media = sum(dados) / len(dados)
     soma_quadrados = sum((x - media) ** 2 for x in dados)
@@ -22,5 +23,7 @@ def obter_extremos():
     pass
 
 dados = limpar_dados(dados_sujos)
+variancia = calcular_variancia(dados)
 
 print(f" Dados processados : {dados}")
+print(f"Variancia dos dados processados: {variancia}")
