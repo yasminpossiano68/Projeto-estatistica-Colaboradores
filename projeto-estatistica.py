@@ -12,7 +12,11 @@ def calcular_mediana():
     pass
 
 def calcular_variancia():
-    pass
+    media = sum(dados) / len(dados)
+    soma_quadrados = sum((x - media) ** 2 for x in dados)
+    variancia = soma_quadrados / len(dados)
+    return variancia       
+pass
 
 def obter_extremos():
     pass
