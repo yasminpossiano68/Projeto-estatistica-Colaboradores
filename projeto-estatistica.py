@@ -6,7 +6,23 @@ def limpar_dados():
     pass
 
 def calcular_media():
-    pass
+ 
+    soma = 0
+    quantidade = 0
+
+    for valor in dados:
+        soma += valor
+        quantidade += 1
+
+    media = soma / quantidade
+    return media
+
+dados = limpar_dados(dados_sujos)
+
+media = calcular_media(dados)
+
+print(f"Dados processados: {dados}")
+print(f"Média dos dados: {media}")
 
 def calcular_mediana():
     pass
