@@ -6,7 +6,23 @@ def limpar_dados():
     pass
 
 def calcular_media():
-    pass
+ 
+    soma = 0
+    quantidade = 0
+
+    for valor in dados:
+        soma += valor
+        quantidade += 1
+
+    media = soma / quantidade
+    return media
+
+dados = limpar_dados(dados_sujos)
+
+media = calcular_media(dados)
+
+print(f"Dados processados: {dados}")
+print(f"Média dos dados: {media}")
 
 def calcular_mediana(dados):
     dados_ordenados = sorted(dados)
@@ -19,11 +35,18 @@ def calcular_mediana(dados):
     else:
         return dados_ordenados[n//2]
 
+# Calculo de Variancia Gustavo e Pedro (os 00 da parada)
 def calcular_variancia():
-    pass
+    media = sum(dados) / len(dados)
+    soma_quadrados = sum((x - media) ** 2 for x in dados)
+    variancia = soma_quadrados / len(dados)
+    return variancia       
+pass
 
-def obter_extremos():
-    pass
+def obter_extremos(dados):
+    menor = min(dados)
+    maior = max(dados)
+    return menor, maior
 
 dados = limpar_dados(dados_sujos)
 mediana = calcular_mediana(dados)
