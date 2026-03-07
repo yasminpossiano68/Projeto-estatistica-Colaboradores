@@ -27,8 +27,13 @@ print(f"Média dos dados: {media}")
 def calcular_mediana():
     pass
 
+# Calculo de Variancia Gustavo e Pedro (os 00 da parada)
 def calcular_variancia():
-    pass
+    media = sum(dados) / len(dados)
+    soma_quadrados = sum((x - media) ** 2 for x in dados)
+    variancia = soma_quadrados / len(dados)
+    return variancia       
+pass
 
 def obter_extremos(dados):
     menor = min(dados)
@@ -36,9 +41,7 @@ def obter_extremos(dados):
     return menor, maior
 
 dados = limpar_dados(dados_sujos)
-
-menor, maior = obter_extremos(dados)
+variancia = calcular_variancia(dados)
 
 print(f" Dados processados : {dados}")
-print(f"Menor valor é: {menor}")
-print(f"Maior valor é: {maior}")
+print(f"Variancia dos dados processados: {variancia}")
