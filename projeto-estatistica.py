@@ -24,8 +24,16 @@ media = calcular_media(dados)
 print(f"Dados processados: {dados}")
 print(f"Média dos dados: {media}")
 
-def calcular_mediana():
-    pass
+def calcular_mediana(dados):
+    dados_ordenados = sorted(dados)
+    n = len(dados_ordenados)
+
+    if n % 2 == 0:
+        meio1 = dados_ordenados[n//2 - 1]
+        meio2 = dados_ordenados[n//2]
+        return (meio1 + meio2) / 2
+    else:
+        return dados_ordenados[n//2]
 
 # Calculo de Variancia Gustavo e Pedro (os 00 da parada)
 def calcular_variancia():
@@ -41,7 +49,7 @@ def obter_extremos(dados):
     return menor, maior
 
 dados = limpar_dados(dados_sujos)
-variancia = calcular_variancia(dados)
-
+mediana = calcular_mediana(dados)
 print(f" Dados processados : {dados}")
-print(f"Variancia dos dados processados: {variancia}")
+
+print(f"Mediana dos dados: {mediana}")
