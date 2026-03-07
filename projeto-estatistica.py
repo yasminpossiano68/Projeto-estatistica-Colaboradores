@@ -8,8 +8,16 @@ def limpar_dados():
 def calcular_media():
     pass
 
-def calcular_mediana():
-    pass
+def calcular_mediana(dados):
+    dados_ordenados = sorted(dados)
+    n = len(dados_ordenados)
+
+    if n % 2 == 0:
+        meio1 = dados_ordenados[n//2 - 1]
+        meio2 = dados_ordenados[n//2]
+        return (meio1 + meio2) / 2
+    else:
+        return dados_ordenados[n//2]
 
 def calcular_variancia():
     pass
@@ -18,5 +26,7 @@ def obter_extremos():
     pass
 
 dados = limpar_dados(dados_sujos)
-
+mediana = calcular_mediana(dados)
 print(f" Dados processados : {dados}")
+
+print(f"Mediana dos dados: {mediana}")
