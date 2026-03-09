@@ -8,7 +8,7 @@ def limpar_dados():
 def calcular_media():
     pass
 
-# igor
+# igor mediana
 def calcular_mediana(dados):
     dados_ordenados = sorted(dados)
     n = len(dados_ordenados)
