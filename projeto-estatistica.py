@@ -2,7 +2,6 @@
 dados_sujos = [10, " erro ", 20, 30, 40, None, 50, 15, " falha ", 25]
 
 def limpar_dados(dados):
-    # Retorne uma lista apenas com int ou float
     dados_limpos = []
     
     for item in dados:
@@ -17,7 +16,7 @@ def calcular_media(dados):
     media = soma / quantidade
     return media
 
-# igor mediana vini
+# igor mediana 
 def calcular_mediana(dados):
     dados_ordenados = sorted(dados)
     n = len(dados_ordenados)
